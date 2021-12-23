@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
-@Component
+@Service
 public class SalaryService {
 
     private EmployeeService employeeService;
@@ -21,7 +22,7 @@ public class SalaryService {
         int payRaisePercent = this.employeeService.getPayRaisePercent(employee);
 
         int currentSalary = employee.getSalary();
-        int raisedSalary = (int)(currentSalary * payRaisePercent / 100.0);
+        int raisedSalary = currentSalary + (int)(currentSalary * payRaisePercent / 100.0);
         employee.setSalary(raisedSalary);
     }
 }
