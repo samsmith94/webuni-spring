@@ -1,9 +1,14 @@
 spring:
   profiles:
     active: smart
+  mvc:
+    format:
+      date: yyyy-MM-dd
 
 hr:
   salary:
     default.payrisepercent: 5
     smart.payrisepercents: 10,5,2,0
     smart.yearsspentlimits: 10,5,2.5
+
+
