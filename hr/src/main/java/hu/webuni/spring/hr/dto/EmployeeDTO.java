@@ -2,11 +2,18 @@ package hu.webuni.spring.hr.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 
-
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class EmployeeDTO {
 
     @JsonIgnore
@@ -28,6 +35,7 @@ public class EmployeeDTO {
     //@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS][.SS][.S]")
     LocalDateTime firstWorkingDay;
 
+    /*
     public EmployeeDTO(Long id, String name, String rank, int salary, LocalDateTime firstWorkingDay) {
         this.id = id;
         this.name = name;
@@ -75,4 +83,6 @@ public class EmployeeDTO {
     public void setFirstWorkingDay(LocalDateTime firstWorkingDay) {
         this.firstWorkingDay = firstWorkingDay;
     }
+
+     */
 }

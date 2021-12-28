@@ -1,8 +1,15 @@
 package hu.webuni.spring.hr.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
 @Entity
 public class Employee {
 
@@ -18,6 +25,7 @@ public class Employee {
     int salary;
     LocalDateTime firstWorkingDay;
 
+    /*
     public Employee(Long id, String name, String rank, int salary, LocalDateTime firstWorkingDay) {
         this.id = id;
         this.name = name;
@@ -65,4 +73,6 @@ public class Employee {
     public void setFirstWorkingDay(LocalDateTime firstWorkingDay) {
         this.firstWorkingDay = firstWorkingDay;
     }
+
+     */
 }
