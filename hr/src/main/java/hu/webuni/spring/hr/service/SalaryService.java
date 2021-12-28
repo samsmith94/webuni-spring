@@ -1,11 +1,6 @@
 package hu.webuni.spring.hr.service;
 
 import hu.webuni.spring.hr.model.Employee;
-import hu.webuni.spring.hr.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 

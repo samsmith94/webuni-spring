@@ -4,6 +4,18 @@ spring:
   mvc:
     format:
       date: yyyy-MM-dd
+  jpa:
+    hibernate:
+      show-sql: true
+      dll-auto: update
+      use-new-id-generator-mappings: false
+
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/hr_database
+    username: springuser
+    password: passwd
+    driver-class-name: com.mysql.jdbc.Driver
 
 hr:
   salary:
