@@ -1,9 +1,6 @@
 package hu.webuni.spring.hr.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,11 +8,12 @@ public class Employee {
 
     @Id
     //@GeneratedValue
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
+    @Column(name="post")
     String rank;
     int salary;
     LocalDateTime firstWorkingDay;

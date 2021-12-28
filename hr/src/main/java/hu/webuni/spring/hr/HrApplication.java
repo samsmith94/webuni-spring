@@ -16,6 +16,7 @@ public class HrApplication implements CommandLineRunner {
 	@Autowired
 	SalaryService salaryService;
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(HrApplication.class, args);
 	}

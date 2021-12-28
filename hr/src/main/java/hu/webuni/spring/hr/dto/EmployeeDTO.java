@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 public class EmployeeDTO {
 
-    //@JsonIgnore
+    @JsonIgnore
     Long id;
 
     @NotEmpty
