@@ -1,19 +1,24 @@
 package hu.webuni.spring.hr.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
 @Entity
 public class Company {
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
     String companyRegistrationNumber;
+
     String name;
+
     String address;
 
     //%%% List of Employees!!!
