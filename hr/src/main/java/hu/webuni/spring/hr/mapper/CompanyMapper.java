@@ -1,7 +1,7 @@
 package hu.webuni.spring.hr.mapper;
 
-import hu.webuni.spring.hr.dto.EmployeeDTO;
-import hu.webuni.spring.hr.model.Employee;
+import hu.webuni.spring.hr.dto.CompanyDto;
+import hu.webuni.spring.hr.model.Company;
 import org.mapstruct.Mapper;
 
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface CompanyMapper {
 
-    List<EmployeeDTO> employeesToDtos(List<Employee> employees);
+    List<CompanyDto> companiesToDtos(List<Company> companies);
 
-    EmployeeDTO employeeToDto(Employee employee);
+    CompanyDto companyToDto(Company company);
 
-    Employee dtoToEmployee(EmployeeDTO employeeDTO);
+    Company dtoToCompany(CompanyDto companyDto);
 }

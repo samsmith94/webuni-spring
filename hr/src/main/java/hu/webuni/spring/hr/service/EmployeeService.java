@@ -1,5 +1,6 @@
 package hu.webuni.spring.hr.service;
 
+import hu.webuni.spring.hr.exception.NoDataFoundException;
 import hu.webuni.spring.hr.model.Employee;
 import hu.webuni.spring.hr.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,8 @@ public abstract class EmployeeService {
         if (employeeFromDb.isPresent()) {
             return employeeFromDb.get();
         } else {
-            throw new EntityNotFoundException();
+            //throw new EntityNotFoundException();
+            throw new NoDataFoundException();
         }
     }
 

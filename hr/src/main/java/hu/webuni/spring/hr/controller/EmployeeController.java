@@ -31,7 +31,6 @@ public class EmployeeController {
 
     @GetMapping("/{id}")
     public EmployeeDTO getById(@PathVariable long id) {
-        //return this.employees.get((int)id);
         Employee employee = employeeService.getEmployeeById(id);
         return employeeMapper.employeeToDto(employee);
     }
@@ -52,7 +51,6 @@ public class EmployeeController {
 
     @DeleteMapping("/{id}")
     public void deleteEmployee(@PathVariable long id) {
-
         employeeService.deleteEmployee(id);
     }
 }
